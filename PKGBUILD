@@ -16,6 +16,7 @@ depends=(
     'python-pandas'
     'systemd'
     'texlive'
+    'texlive-latexextra'
     'uwsgi'
     'uwsgi-plugin-python'
 )
