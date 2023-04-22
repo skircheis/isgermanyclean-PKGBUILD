@@ -15,6 +15,7 @@ depends=(
     'python-matplotlib'
     'python-pandas'
     'systemd'
+    'texlive'
     'uwsgi'
     'uwsgi-plugin-python'
 )
