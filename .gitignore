@@ -1,0 +1,4 @@
+pkg/
+src/
+isgermanyclean/
+*.pkg.tar.zst
