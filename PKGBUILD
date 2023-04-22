@@ -14,6 +14,7 @@ depends=(
     'python-flask-assets'
     'python-matplotlib'
     'python-pandas'
+    'sass'
     'systemd'
     'texlive-core'
     'texlive-latexextra'
