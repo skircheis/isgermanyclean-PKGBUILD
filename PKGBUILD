@@ -2,7 +2,7 @@
 
 pkgbase=isgermanyclean
 pkgname=${pkgbase}-git
-pkgver=0.1.0.r0.g886fb38
+pkgver=0.2.3.r0.g88b150e
 pkgrel=1
 pkgdesc="Is Germany cleaner than France today?"
 url='http://github.com/skircheis/isgermanyclean.git'
@@ -16,6 +16,7 @@ depends=(
     'python-pandas'
     'sass'
     'systemd'
+    'sqlite'
     'texlive-core'
     'texlive-latexextra'
     'uwsgi'
