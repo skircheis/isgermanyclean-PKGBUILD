@@ -2,7 +2,7 @@
 
 pkgbase=isgermanyclean
 pkgname=${pkgbase}-git
-pkgver=0.2.3.r0.g88b150e
+pkgver=0.3.0.r0.ge2257a0
 pkgrel=1
 pkgdesc="Is Germany cleaner than France today?"
 url='http://github.com/skircheis/isgermanyclean.git'
@@ -34,6 +34,11 @@ provides=("${pkgname}")
 pkgver() {
   cd "$srcdir/$pkgbase"
   git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+prepare() {
+    # Clean out old wheels etc.
+    git -C "${pkgname%-git}" clean -dfx
 }
 
 build() {
