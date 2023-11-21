@@ -1,8 +1,8 @@
 # Maintainer: Siegfried Kircheis < kircheis [dot] siegfried [at] proton [dot] me >
 
-pkgbase=isgermanyclean
-pkgname=${pkgbase}-git
-pkgver=0.3.0.r0.ge2257a0
+_pkgname=isgermanyclean
+pkgname=${_pkgname}-git
+pkgver=0.4.0.r11.ge458581
 pkgrel=1
 pkgdesc="Is Germany cleaner than France today?"
 url='http://github.com/skircheis/isgermanyclean.git'
@@ -32,22 +32,22 @@ sha256sums=(SKIP)
 provides=("${pkgname}")
 
 pkgver() {
-  cd "$srcdir/$pkgbase"
+  cd "$srcdir/$_pkgname"
   git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
     # Clean out old wheels etc.
-    git -C "${pkgname%-git}" clean -dfx
+    git -C "${_pkgname}" clean -dfx
 }
 
 build() {
-    cd "${pkgbase}"
+    cd "${_pkgname}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${pkgbase}"
+    cd "${_pkgname}"
     python -m installer --destdir="$pkgdir" dist/*.whl
 
     mkdir -p "$pkgdir/usr/lib/systemd/user"
