@@ -2,7 +2,7 @@
 
 _pkgname=isgermanyclean
 pkgname=${_pkgname}-git
-pkgver=0.4.0.r11.ge458581
+pkgver=0.5.0.r2.g615aa9f
 pkgrel=1
 pkgdesc="Is Germany cleaner than France today?"
 url='http://github.com/skircheis/isgermanyclean.git'
@@ -25,6 +25,8 @@ depends=(
 makedepends=(
     'python-setuptools'
     'python-wheel'
+    'python-versioningit'
+    'python-setuptools-git'
 )
 source=('git+https://github.com/skircheis/isgermanyclean.git')
 sha256sums=(SKIP)

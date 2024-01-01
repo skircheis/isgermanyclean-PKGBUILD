@@ -1,0 +1,28 @@
+pkgbase = isgermanyclean-git
+	pkgdesc = Is Germany cleaner than France today?
+	pkgver = 0.5.0.r2.g615aa9f
+	pkgrel = 1
+	url = http://github.com/skircheis/isgermanyclean.git
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-versioningit
+	makedepends = python-setuptools-git
+	depends = python>=3.9
+	depends = python-flask
+	depends = python-flask-assets
+	depends = python-matplotlib
+	depends = python-pandas
+	depends = sass
+	depends = systemd
+	depends = sqlite
+	depends = texlive-core
+	depends = texlive-latexextra
+	depends = uwsgi
+	depends = uwsgi-plugin-python
+	provides = isgermanyclean-git
+	source = git+https://github.com/skircheis/isgermanyclean.git
+	sha256sums = SKIP
+
+pkgname = isgermanyclean-git
